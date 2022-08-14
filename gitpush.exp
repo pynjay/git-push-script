@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+
+spawn git push
+
+expect "Username*: "
+
+send "username\r"
+
+expect "Password*: "
+
+send "token\r"
+
+expect eof
